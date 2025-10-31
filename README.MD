@@ -8,6 +8,7 @@
 3. [Percobaan 3](#percobaan-3)
 - [Pertanyaan](#pertanyaan-2)
     * [Jawaban](#jawaban-2)
+4. [Percobaan 4](#percobaan-4)
 
 
 ## Percobaan 1
@@ -81,3 +82,7 @@ Tidak sama, output yang dihasilkan adalah semua bintang ter-output tetapi dalam 
 
 <!-- prev answer: add sout after line 10 
 basically its sout after the inner loop so it prints a new line after every inner loop before updating the outer loop executing the loop again. -->
+
+
+## Percobaan 4
+[RataNilai08.java](/RataNilai08.java)
