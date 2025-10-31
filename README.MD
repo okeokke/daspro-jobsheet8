@@ -2,7 +2,11 @@
 1. [Percobaan 1](#percobaan-1)
 - [Pertanyaan](#pertanyaan)
     * [Jawaban](#jawaban)
+2. [Percobaan 2](#percobaan-2)
+- [Pertanyaan](#pertanyaan-1)
+    * [Jawaban](#jawaban-1)
     
+
 ## Percobaan 1
 [Star08.java](/Star08.java)
 ### Pertanyaan
@@ -30,3 +34,23 @@ bisa demikian?
 3. Mirip seperti pada jawaban sebelumnya, perulangan akan terus-menerus dilakukan untuk setiap nilai positif var. N, karena update terjadi pada var. i yang nilainya terus menurun dan secara otomatis akan selalu lebih rendah daripada kondisi i<=N yang menghasilkan true secara terus menerus dengan update i-- dengan asumsi inisialisasi var. i=1, dan assignment var. N=1 atau lebih besar (setiap bilangan positif).
 
 <!-- referring to the previous answer, it will loop for every positive number of var. N, becuase the update is for var. i. which, since it will get lower and lower, it will always fullfill the i<=N condition, assuming the initialization was i=1. (w.i.p answer) -->
+
+
+## Percobaan 2
+[Square08.java](/Square08.java)
+### Pertanyaan
+1. Perhatikan perulangan luar. Jika pada sintaks **for**, inisialisasi `iOuter=1` diubah menjadi `iOuter=0`, apa yang akibatnya? Mengapa bisa demikian?  
+2. Kembalikan program semula dimana inisialisasi **iOuter=1.** Kemudian perhatikan perulangan dalam, Jika pada sintaks **for**, inisialisasi `i=1` diubah menjadi `i=0`, apa yang akibatnya? Mengapa bisa demikian?  
+3. Jadi,  apakah  perbedaan  kegunaan  antara  perulangan  luar  dengan  perulangan  yang 
+berada didalamnya?  
+4. Mengapa perlu ditambahkan sintaks `System.out.println();` di bawah perulangan dalam? Apa akibatnya jika sintaks tersebut dihilangkan? 
+5. Silakan commit dan push ke repository Anda.
+
+### Jawaban
+1. Jumlah bintang pada tiap baris tetap mengikuti var. N, tetapi jumlah baris yang ada melebihi satu dari nilai N. Mirip seperti pertanyaan pertama pada percobaan sebelumnya, hal ini terjadi karena inisialisasi nilai 0 dan kondisi yang menggunakan <=, yang membuat total urutan angka sebanyak satu lebih banyak daripada nilai yang kita assign pada var. N. yang membuat kode yang ada didalamnya dijalankan satu kali lebih banyak. tetapi, hal ini tidak mengefek jumlah bintang yang di-output dalam satu baris, karena perulangan luar ini mengeksekusi 2 hal, yaitu menjalankan inner loop, dan mencetak baris baru. mengoutput hasil inner loop dan mencetak baris baru satu kali lebih banyak.
+
+2. Jumlah bintang per baris bertambah satu, mirip dengan pertanyaan pertama dari percobaan sebelumnya. Dengan alasan mengatur i=0, menggeser posisi inisial perhitungan urutan satu perulangan lebih banyak karena kondisi yang dicari adalah <=N.
+
+3. Perulangan luar digunakan untuk mengatur jumlah baris dan di dalamnya terdapat perulangan dalam yang mengatur jumlah isi tiap barisnya.
+
+4. `System.out.println();` setelah perulangan dalam di dalam perulangan luar berarti saat perulangan luar dijalankan, perulangan dalam dijalankan yang mencetak bintang sesuai N, setelah perulangan dalam selesai `System.out.println();` mencetak baris kosong baru sebelum perulangan luar melakukan update dan mengecek kondisi sebelum melakukan perulangan lagi atau berhenti.
