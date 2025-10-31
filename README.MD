@@ -5,7 +5,10 @@
 2. [Percobaan 2](#percobaan-2)
 - [Pertanyaan](#pertanyaan-1)
     * [Jawaban](#jawaban-1)
-    
+3. [Percobaan 3](#percobaan-3)
+- [Pertanyaan](#pertanyaan-2)
+    * [Jawaban](#jawaban-2)
+
 
 ## Percobaan 1
 [Star08.java](/Star08.java)
@@ -33,7 +36,7 @@ bisa demikian?
 
 3. Mirip seperti pada jawaban sebelumnya, perulangan akan terus-menerus dilakukan untuk setiap nilai positif var. N, karena update terjadi pada var. i yang nilainya terus menurun dan secara otomatis akan selalu lebih rendah daripada kondisi i<=N yang menghasilkan true secara terus menerus dengan update i-- dengan asumsi inisialisasi var. i=1, dan assignment var. N=1 atau lebih besar (setiap bilangan positif).
 
-<!-- referring to the previous answer, it will loop for every positive number of var. N, becuase the update is for var. i. which, since it will get lower and lower, it will always fullfill the i<=N condition, assuming the initialization was i=1. (w.i.p answer) -->
+<!-- prev answer: referring to the previous answer, it will loop for every positive number of var. N, becuase the update is for var. i. which, since it will get lower and lower, it will always fullfill the i<=N condition, assuming the initialization was i=1. (w.i.p answer) -->
 
 
 ## Percobaan 2
@@ -54,3 +57,27 @@ berada didalamnya?
 3. Perulangan luar digunakan untuk mengatur jumlah baris dan di dalamnya terdapat perulangan dalam yang mengatur jumlah isi tiap barisnya.
 
 4. `System.out.println();` setelah perulangan dalam di dalam perulangan luar berarti saat perulangan luar dijalankan, perulangan dalam dijalankan yang mencetak bintang sesuai N, setelah perulangan dalam selesai `System.out.println();` mencetak baris kosong baru sebelum perulangan luar melakukan update dan mengecek kondisi sebelum melakukan perulangan lagi atau berhenti.
+
+
+## Percobaan 3
+[Triangle08.java](/Triangle08.java)\
+(Cek commit history karena ada update pada file untuk menjawab pertanyaan percobaan 3)
+
+### Pertanyaan
+1. Perhatikan, apakah output yang dihasilkan dengan nilai N = 5 sesuai dengan  tampilan berikut? 
+```
+*
+**
+***
+****
+*****
+```
+2. Jika  tidak  sesuai,  bagian  mana  saja  yang  harus  diperbaiki/ditambahkan?  Jelaskan setiap bagian yang perlu diperbaiki/ditambahkan.  
+3. Silakan commit dan push ke repository Anda. 
+
+### Jawaban
+
+Tidak sama, output yang dihasilkan adalah semua bintang ter-output tetapi dalam satu line/baris yang sama. Cara membenarkannya adalah dengan cara menambahkan `System.out.println();` pada baris ke-10 atau sesudah perulangan dalam, jadi setelah perulangan dalam selesai melakukan bagiannya, sebelum outer loop di-update dan melakukan perulangan yang aakan mengeksekusi perulangan dalam lagi, akan meng-output line kosong sebelum outer loop selesai dan mengeksekusi loop yang memiliki loop dalamnya lagi.
+
+<!-- prev answer: add sout after line 10 
+basically its sout after the inner loop so it prints a new line after every inner loop before updating the outer loop executing the loop again. -->
