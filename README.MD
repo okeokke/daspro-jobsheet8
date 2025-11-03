@@ -1,6 +1,8 @@
 # TUGAS
 ### TUGAS 1
-[Tugas1 / T1Job8_08.java](#T1Job8_08.java)
+[Tugas1 / T1Job8_08.java](/T1Job8_08.java)
+### TUGAS 2
+[Tugas2 / T2Job8_08.java](/T2Job8_08.java)
 
 # Percobaan
 1. [Percobaan 1](#percobaan-1)
